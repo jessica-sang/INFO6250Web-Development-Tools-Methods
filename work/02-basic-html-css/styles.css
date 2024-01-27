@@ -1,0 +1,29 @@
+body {
+    background-color: #d0b0b0;
+  }
+  
+  header, footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header .logo {
+    margin-right: 15px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    color: #333;
+  }
+  
