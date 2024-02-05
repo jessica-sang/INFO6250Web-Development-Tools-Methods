@@ -1,6 +1,6 @@
 const users = { // Yes, an object!  Keep it as one
   "Amit": "Amit", // The keys let you check to see if the user is logged in
-  "Bao": "Bao",  // the values don't really matter, here we reuse the username, but it could be `true`
+  "Bao": "Bao", // the values don't really matter, here we reuse the username, but it could be `true`
 };
 
 const messages = [ // Notice: An array of objects
@@ -15,8 +15,13 @@ const messages = [ // Notice: An array of objects
 ];
 
 // Below uses destrucuring
-function addMessage({ sender, text }) { // Leave this as `sender` - I want to see you solve the name disagreement
-  // Fill in!
+function addMessage({ sender, text }) {
+  // Automatically add the user if not already present in the 'users' object
+  if (!users[sender]) {
+    users[sender] = sender;
+  }
+  // Add the message to the 'messages' array
+  messages.push({ sender, text });
 }
 
 const chat = {
