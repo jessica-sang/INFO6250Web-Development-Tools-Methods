@@ -12,11 +12,11 @@ app.get('/', (req, res) => {
 });
 
 
-// Below includes an example of pulling fields from a POST request body
+// Handle POST request to '/chat'
 app.post('/chat', express.urlencoded({ extended: false }), (req, res) => {
-  const { text } = req.body; // You'll need to add something!
-  // Fill in here - Do not return HTML, just update server data
-  res.redirect('/'); // Redirect to the home page
+  const { username, text } = req.body; // Extract 'username' and 'text' from request body
+  chat.addMessage({ sender: username, text }); // Add new message to chat
+  res.redirect('/'); // Redirect to the home page after posting a message
 });
 
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));

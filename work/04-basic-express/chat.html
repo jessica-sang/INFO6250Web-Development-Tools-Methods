@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="chat-app">
+      <ul class="users">
+        <!-- Users will be dynamically inserted here -->
+      </ul>
+      <ol class="messages">
+        <!-- Messages will be dynamically inserted here -->
+      </ol>
+      <div class="outgoing">
+        <form action="/chat" method="POST">
+          <input type="hidden" name="username" value="">
+          <input type="text" name="text" class="to-send" placeholder="Enter message to send"/>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

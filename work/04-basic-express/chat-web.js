@@ -6,12 +6,12 @@ const chatWeb = {
   // chatPage() returns the HTML for the page
   // it calls the other methods to generate the HTML for different sections
   chatPage: function(chat) {
-    // Fill in/modify anything below!
     return `
       <!doctype html>
       <html>
         <head>
           <title>Chat</title>
+          <link rel="stylesheet" type="text/css" href="/style.css">
         </head>
         <body>
           <div id="chat-app">
@@ -26,10 +26,17 @@ const chatWeb = {
 
   getMessageList: function(chat) {
     return `<ol class="messages">` +
-      // Fill in
-      // Generate the HTML for the list of messages
+      chat.messages.map(message => `
+        <li>
+          <div class="message">
+            <span class="message-sender">${message.sender}</span>
+            <span class="message-text">${message.text}</span>
+          </div>
+        </li>
+      `).join('') +
       `</ol>`;
   },
+
   getUserList: function(chat) {
     // This is a bit of a complex structure
     // Lookup Object.values() in MDN
@@ -47,9 +54,17 @@ const chatWeb = {
     `).join('') +
     `</ul>`;
   },
-  getOutgoingSection: function() {
-    // Fill in
-    // Generate the HTML for a form to send a message
+
+  getOutgoingSection: function(chat) {
+    return `
+      <div class="outgoing">
+        <form action="/chat" method="POST">
+          <input type="hidden" name="username" value="">
+          <input type="text" name="text" placeholder="Type a message...">
+          <button type="submit">Send</button>
+        </form>
+      </div>`;
   }
 };
+
 module.exports = chatWeb;
