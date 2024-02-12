@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Page</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome, {{username}}</h2>
+        <p>Your stored word is: {{word}}</p>
+        <form action="/update-word" method="post">
+            <input type="text" name="word" value="{{word}}" /><br>
+            <button type="submit">Update Word</button>
+        </form>
+        <form action="/logout" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
