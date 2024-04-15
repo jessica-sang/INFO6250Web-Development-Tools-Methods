@@ -16,7 +16,7 @@ export function fetchLogin(username) {
   return fetch('/api/session/', {
     method: 'POST',
     headers: {
-      'content-type': 'application/json', // set this header when sending JSON in the body of request
+      'Content-Type': 'application/json', // set this header when sending JSON in the body of request
     },
     body: JSON.stringify( { username } ),
   })
@@ -34,5 +34,51 @@ export function fetchLogin(username) {
   });
 }
 
+export const fetchSession = () => {
+  return fetch('/api/session')
+  .catch( err => Promise.reject({ error: 'network-error' }) )
+  .then( response => {
+    return response.json();
+  })
+}
 
+export const fetchWord = () => {
+  return fetch('/api/word')
+  .catch( err => Promise.reject({ error: 'network-error' }) )
+  .then( response => {
+    return response.json();
+  })
+}
 
+export const fetchUpdateWord = (word) => {
+  return fetch('/api/word', {
+    method: 'PUT',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify( { word } ),
+  })
+  .catch( err => Promise.reject({ error: 'network-error' }) )
+  .then( response => {
+    if (response.ok) {
+      return response.json()
+    } else {
+      return response.json().then( err => Promise.reject(err) )
+    }
+  })
+}
+
+export const fetchDelete = () => {
+  return fetch('/api/session', {
+    method: 'DELETE',
+    headers: {
+      'content-type': 'application/json',
+    },
+  })
+  .catch( err => Promise.reject({ error: 'network-error' }) )
+  .then( response => {
+    if (response.ok) {
+      return response.json()
+    }
+  })
+}
