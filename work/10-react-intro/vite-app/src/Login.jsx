@@ -17,7 +17,7 @@ function LoginPage({ setIsLoggedIn, setUsername }) {
     }
 
     function onSubmitHandler() {
-        const allowlist = ['alex', 'bob', 'charlie', 'user', 'jessica'];
+        const allowlist = ['alex', 'bob', 'charlie', 'user', 'jessica', 'neville'];
 
         if (isValidUsername(inputValue, allowlist)) {
             setIsLoggedIn(true);
