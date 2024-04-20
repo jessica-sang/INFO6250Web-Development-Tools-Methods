@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: azure;
+  background-color: lightblue;
 }
 
 h1 {
@@ -13,7 +13,7 @@ h1 {
   margin: 0;
   color: white;
   text-shadow: 0 0 5px black;
-  background-color: lightblue;
+  background-color: rgb(247,202,201);
 
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@ h1 {
   width: 600px;
   height: 500px;
   text-align: center;
-  background-color: lightblue;
+  background-color: rgb(247,202,201);
   border-radius: 5px;
   margin-top: 30px;
   box-shadow: 1px 3px 3px gray;
@@ -70,7 +70,7 @@ form {
   width: 100%;
   font-size: 50px;
   font-weight: bolder;
-  color: rgb(247,202,201);
+  color: rgb(0, 0, 0);
   text-shadow: 0 0 5px white;
   border-bottom: 1px dashed white;
 }
