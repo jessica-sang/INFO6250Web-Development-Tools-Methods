@@ -1,0 +1,129 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: azure;
+}
+
+h1 {
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  color: white;
+  text-shadow: 0 0 5px black;
+  background-color: lightblue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-panel {
+  width: 600px;
+  height: 500px;
+  text-align: center;
+  background-color: lightblue;
+  border-radius: 5px;
+  margin-top: 30px;
+  box-shadow: 1px 3px 3px gray;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App, .login, .user {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+form {
+  width: 60%;
+  height: 80%;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading, .error {
+  width: 100%;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-name {
+  width: 100%;
+  font-size: 50px;
+  font-weight: bolder;
+  color: rgb(128, 174, 190);
+  text-shadow: 0 0 5px white;
+  border-bottom: 1px dashed white;
+}
+
+.word {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+input, button {
+  width: 80%;
+  height: 50px;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 3px 3px gray;
+  border: none;
+}
+
+button:hover {
+  font-size: 20px;
+  transition: 0.5s;
+  opacity: 0.8;
+  text-shadow: 0 0 5px grey;
+}
+
+.login-button {
+  background-color: green;
+  color: white;
+}
+
+.logout-button {
+  background-color: red;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .display-panel {
+    width: 80%;
+  }
+
+  .error {
+    font-size: 20px;
+  }
+}
