@@ -70,7 +70,7 @@ form {
   width: 100%;
   font-size: 50px;
   font-weight: bolder;
-  color: rgb(128, 174, 190);
+  color: rgb(247,202,201);
   text-shadow: 0 0 5px white;
   border-bottom: 1px dashed white;
 }
@@ -97,7 +97,7 @@ input, button {
 button {
   margin-top: 10px;
   border-radius: 5px;
-  box-shadow: 1px 3px 3px gray;
+  box-shadow: 1px 3px 3px rgb(147, 147, 147);
   border: none;
 }
 
