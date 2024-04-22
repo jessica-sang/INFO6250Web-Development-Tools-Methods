@@ -1,0 +1,67 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: rgb(247,202,201);
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+form {
+  width: 80%;
+}
+
+input, button {
+  width: 80%;
+  height: 50px;
+  text-align: center;
+  font-size: 15px;
+}
+
+button {
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 3px 3px gray;
+  border: none;
+}
+
+button:hover {
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.login-button {
+  background-color: green;
+  color: white;
+}
+
+.logout-button {
+  background-color: red;
+  color: white;
+}
+
+form, .App, .login-page, .game-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-page, .game-page {
+  width: 100%;
+}
+
+.result {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.error {
+  color: red;
+}
