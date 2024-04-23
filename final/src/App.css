@@ -4,7 +4,7 @@
 
 body {
   margin: 0 5px;
-  background-color: rgb(0, 0, 0);
+  background-color: wheat;
 }
 
 header {
@@ -139,4 +139,31 @@ button:hover {
   font-size: 15px;
   background-color: rgb(177, 43, 43);
   color: white;
+}
+
+.banana-punch-card {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #ffc107;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgb(255, 220, 65);
+}
+
+.banana-punch-card h3 {
+  margin: 10px 0;
+}
+
+.banana-punch-card button {
+  padding: 10px 20px;
+  background-color: #ffc107;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.banana-punch-card button:hover {
+  background-color: #e0a800;
 }

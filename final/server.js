@@ -92,4 +92,28 @@ app.post('/api/message', (req, res) => {
     res.json({ username, users: usersInfo.users, messages: usersInfo.messages });
 });
 
+// 获取用户的香蕉打卡次数
+app.get('/api/banana-count/:username', (req, res) => {
+    const username = req.params.username;
+    if (!username || !usersInfo.users[username]) {
+        res.status(404).json({ error: 'User not found' });
+        return;
+    }
+    const count = usersInfo.getBananaCount(username);
+    res.json({ count });
+});
+
+// 更新用户的香蕉打卡次数
+app.post('/api/banana-punch', (req, res) => {
+    const sid = req.cookies.sid;
+    const username = sid ? sessions.getSessionUser(sid) : '';
+    
+    if (!username) {
+        res.status(401).json({ error: 'Unauthorized' });
+        return;
+    }
+    const count = usersInfo.punchBanana(username);
+    res.json({ count });
+});
+
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));

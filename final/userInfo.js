@@ -8,8 +8,22 @@ const isValidUsername = (username) => {
     return isValid;
 };
 
+const punchBanana = (username) => {
+    if (!users[username]) {
+        users[username] = { loginStatus: false, bananaCount: 0 };
+    }
+    users[username].bananaCount = (users[username].bananaCount || 0) + 1;
+    return users[username].bananaCount;
+};
+
+const getBananaCount = (username) => {
+    return users[username] ? users[username].bananaCount || 0 : 0;
+};
+
 module.exports = {
     users,
     messages,
-    isValidUsername
+    isValidUsername,
+    punchBanana,
+    getBananaCount
 };
